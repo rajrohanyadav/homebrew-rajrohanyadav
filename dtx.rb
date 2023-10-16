@@ -10,7 +10,7 @@ class Dtx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Darwin_x86_64.tar.gz"
-      sha256 "1d51d5fdc1c02f720e2b6396c5daf75663cc71d3c89f057bc4f7d44a761453a4"
+      sha256 "80e8cfca1dcc6c08160b2a77f9d063225992642b9c64b8cd24221974d6cf0db8"
 
       def install
         bin.install "dtx"
@@ -18,7 +18,7 @@ class Dtx < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Darwin_arm64.tar.gz"
-      sha256 "6cdf71067a4b0e57aa022c8e7bd4ee2e39705db6969f4b49541f75252a1ce6a8"
+      sha256 "06ce2cf4426da3a0f344b9a04bbf6963bb9d62d4e1afb2c094e774dad33b42d1"
 
       def install
         bin.install "dtx"
@@ -27,17 +27,17 @@ class Dtx < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_arm64.tar.gz"
-      sha256 "da1e469300f73028b46f8c83c23a638b2342b702aa9c6f2c4ba5589662023506"
+    if Hardware::CPU.intel?
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_x86_64.tar.gz"
+      sha256 "cf211888d672d628a0b3cb03ff198f656bf26c8a77c014634787a1032b7217ed"
 
       def install
         bin.install "dtx"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_x86_64.tar.gz"
-      sha256 "1442440b99d201163628614a9d45038ab4d7ae3b06e499cb907fc7c51200de53"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_arm64.tar.gz"
+      sha256 "6b92431c76525186f2b478c41e5527fdab6c88de9455ab3425f9c991281ad8a2"
 
       def install
         bin.install "dtx"
@@ -45,7 +45,7 @@ class Dtx < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_armv6.tar.gz"
-      sha256 "85c695b6c852458e3e58ec336db035e311f5807ae4796233ef377063004e1c94"
+      sha256 "5d948d62d65578d3b73e47ba9673f0d31602eb775d060e268732cfa1b22dbe5c"
 
       def install
         bin.install "dtx"
