@@ -5,20 +5,20 @@
 class Dtx < Formula
   desc ""
   homepage "https://github.com/rajrohanyadav/dtx"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Darwin_x86_64.tar.gz"
-      sha256 "80e8cfca1dcc6c08160b2a77f9d063225992642b9c64b8cd24221974d6cf0db8"
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.2/dtx_Darwin_x86_64.tar.gz"
+      sha256 "0106a237410be633478e2427a4ffb94122b4898ddb85e450cfe04ff141cc67bf"
 
       def install
         bin.install "dtx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Darwin_arm64.tar.gz"
-      sha256 "06ce2cf4426da3a0f344b9a04bbf6963bb9d62d4e1afb2c094e774dad33b42d1"
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.2/dtx_Darwin_arm64.tar.gz"
+      sha256 "edb095c01cc231cf242e148d7f1c34d04929203881cff03af874564d0c444043"
 
       def install
         bin.install "dtx"
@@ -28,24 +28,24 @@ class Dtx < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_x86_64.tar.gz"
-      sha256 "cf211888d672d628a0b3cb03ff198f656bf26c8a77c014634787a1032b7217ed"
-
-      def install
-        bin.install "dtx"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_arm64.tar.gz"
-      sha256 "6b92431c76525186f2b478c41e5527fdab6c88de9455ab3425f9c991281ad8a2"
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.2/dtx_Linux_x86_64.tar.gz"
+      sha256 "30d7884aba65db02c78ec5771ff5e5548bb94e55acf3ad815f689a1222dc7a8c"
 
       def install
         bin.install "dtx"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.1/dtx_Linux_armv6.tar.gz"
-      sha256 "5d948d62d65578d3b73e47ba9673f0d31602eb775d060e268732cfa1b22dbe5c"
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.2/dtx_Linux_armv6.tar.gz"
+      sha256 "67eb37beee4693add9b6467fe7c9fa6c3cde237a2b46bac1cf1ea03d15272cd6"
+
+      def install
+        bin.install "dtx"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rajrohanyadav/dtx/releases/download/v0.0.2/dtx_Linux_arm64.tar.gz"
+      sha256 "ffed1ad46cb96689c9ce9b36fa424a54f033b76d5cd851d26cf08333303d58bf"
 
       def install
         bin.install "dtx"
